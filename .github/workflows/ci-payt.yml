@@ -2,7 +2,7 @@ name: Cypress Payt
 
 on:
   push:
-  
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,7 +21,12 @@ jobs:
 
     - name: Set Cypress environment variables
       run: |
-        echo "{\"user_name\": \"$user_name\", \"user_password\": \"$user_password\", \"user_name_error\": \"$user_name_error\", \"user_password_error\": \"$user_password_error\"}" > cypress.env.json
+        echo "{\"user_name\": \"$USER_NAME\", \"user_password\": \"$USER_PASSWORD\", \"user_name_error\": \"$USER_NAME_ERROR\", \"user_password_error\": \"$USER_PASSWORD_ERROR\"}" > cypress.env.json
+      env:
+        USER_NAME: ${{ secrets.USER_NAME }}
+        USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
+        USER_NAME_ERROR: ${{ secrets.USER_NAME_ERROR }}
+        USER_PASSWORD_ERROR: ${{ secrets.USER_PASSWORD_ERROR }}
 
     - name: Run Cypress tests
       run: npx cypress run --browser chrome
