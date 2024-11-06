@@ -1,6 +1,7 @@
 .DS_Store
 cypress.env.json
 cypress/downloads/
-cypress/screenshots/
+cypress/results/
 cypress/videos/
 node_modules/
+.history
