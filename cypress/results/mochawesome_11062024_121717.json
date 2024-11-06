@@ -1,0 +1,146 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-06T15:17:02.510Z",
+    "end": "2024-11-06T15:17:17.407Z",
+    "duration": 14897,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3e4c46a2-1a03-4bf0-8acd-253bac9301c6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "04a58812-317b-4986-93a6-fe275fe866a2",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login successfully",
+              "fullTitle": "Login login successfully",
+              "timedOut": null,
+              "duration": 8972,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const user = Cypress.env('user_name');\nconst password = Cypress.env('user_password');\n_Login.default.acessarLogin();\n_Login.default.preencherLogin(user, password);\n_Login.default.validarAcesso();",
+              "err": {},
+              "uuid": "8ce4ca3b-e3be-49c8-acb9-58539685a370",
+              "parentUUID": "04a58812-317b-4986-93a6-fe275fe866a2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8ce4ca3b-e3be-49c8-acb9-58539685a370"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8972,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "5d3e63de-0f28-4871-81a6-11144e060872",
+          "title": "Login error",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Messagem de erro ao logar com login errado",
+              "fullTitle": "Login error Messagem de erro ao logar com login errado",
+              "timedOut": null,
+              "duration": 2751,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const userError = Cypress.env('user_name_error');\nconst passwordError = Cypress.env('user_password_error');\n_Login.default.acessarLogin();\n_Login.default.preencherLoginError(userError, passwordError);\n_Login.default.validarMsgError();",
+              "err": {},
+              "uuid": "1cb53d52-458e-4170-ab38-66cd9d112140",
+              "parentUUID": "5d3e63de-0f28-4871-81a6-11144e060872",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1cb53d52-458e-4170-ab38-66cd9d112140"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2751,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss",
+        "screenshots": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
