@@ -28,5 +28,9 @@ jobs:
         USER_NAME_ERROR: ${{ secrets.USER_NAME_ERROR }}
         USER_PASSWORD_ERROR: ${{ secrets.USER_PASSWORD_ERROR }}
 
+    - name: Verificar conteúdo de cypress.env.json
+      run: cat cypress.env.json
+
+
     - name: Run Cypress tests
       run: npx cypress run --browser chrome
