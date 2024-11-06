@@ -26,7 +26,7 @@ jobs:
 
     - name: Set Cypress environment variables
       run: |
-        echo "{\"user_name\": \"$CYPRESS_user_name\", \"user_password\": \"$CYPRESS_user_password\", \"user_name_error\": \"$CYPRESS_user_name_error\", \"user_password_error\": \"$CYPRESS_user_password_error\"}" > cypress.env.json
+        echo "{\"user_name\": \"$user_name\", \"user_password\": \"$user_password\", \"user_name_error\": \"$user_name_error\", \"user_password_error\": \"$user_password_error\"}" > cypress.env.json
 
     - name: Run Cypress tests
       run: npx cypress run --browser chrome
